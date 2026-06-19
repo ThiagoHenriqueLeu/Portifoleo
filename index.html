@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Thiago Leu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir para o início">TL</a>
+    <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfólio de desenvolvimento</p>
+        <h1>Thiago Leu</h1>
+        <p class="hero-text">
+          Sites, sistemas e aplicativos criados com foco em interfaces diretas,
+          regras de negócio funcionais e integração com dados locais ou Firebase.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#projetos">Ver projetos</a>
+          <a class="secondary-link" href="#contato">Contato</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Resumo do portfólio">
+        <div>
+          <strong>03</strong>
+          <span>projetos em destaque</span>
+        </div>
+        <div>
+          <strong>Web + Mobile</strong>
+          <span>HTML, CSS, React Native e Firebase</span>
+        </div>
+        <div>
+          <strong>Dados</strong>
+          <span>JSON local, formulários e autenticação</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section about-section">
+      <div>
+        <p class="section-kicker">Sobre</p>
+        <h2>Desenvolvimento prático, com projeto rodando de verdade.</h2>
+      </div>
+      <p>
+        Este portfólio reúne trabalhos de estudo e desenvolvimento: uma landing page
+        para granja, uma tela de login com envio para backend PHP e uma loja de peças
+        automotivas com aplicativo, carrinho, pedidos, API local em JSON e sincronização.
+      </p>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="section-heading">
+        <p class="section-kicker">Projetos</p>
+        <h2>Trabalhos selecionados</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <img src="assets/tuning-roda.webp" alt="Roda automotiva esportiva">
+          <div class="project-content">
+            <p class="project-type">Aplicativo Expo + API local</p>
+            <h3>Tuning Shop</h3>
+            <p>
+              Loja de peças automotivas com área do cliente, carrinho, pedidos,
+              painel administrativo, cadastro de produtos, cálculo de frete, cupons
+              e integração com Firebase.
+            </p>
+            <ul class="tags">
+              <li>React Native</li>
+              <li>Expo</li>
+              <li>Firebase</li>
+              <li>API JSON</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/granja-hero.jpg" alt="Imagem rural usada no site da granja">
+          <div class="project-content">
+            <p class="project-type">Site institucional</p>
+            <h3>Granja Galinhas Douradas</h3>
+            <p>
+              Página web estática para apresentação de granja, produtos, navegação
+              simples e comunicação visual voltada para alimentos naturais.
+            </p>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Landing page</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card login-card">
+          <div class="login-preview">
+            <div class="login-window">
+              <span></span>
+              <h4>Login</h4>
+              <label>Usuário</label>
+              <div></div>
+              <label>Senha</label>
+              <div></div>
+              <button>Enviar</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-type">Tela de autenticação</p>
+            <h3>Crip Rogério</h3>
+            <p>
+              Interface de login em HTML e CSS conectada por formulário POST para
+              validação em endpoint PHP externo.
+            </p>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Formulário</li>
+              <li>PHP POST</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section skills-section">
+      <div class="section-heading">
+        <p class="section-kicker">Habilidades</p>
+        <h2>Tecnologias usadas nos projetos</h2>
+      </div>
+      <div class="skills">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>React Native</span>
+        <span>Expo</span>
+        <span>Firebase</span>
+        <span>Node.js</span>
+        <span>JSON API</span>
+        <span>UI Mobile</span>
+      </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+      <p class="section-kicker">Contato</p>
+      <h2>Vamos transformar projeto de aula em sistema apresentável.</h2>
+      <p>Portfólio local com base nos projetos encontrados no computador.</p>
+      <a class="primary-link" href="mailto:thiago@example.com">thiago@example.com</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Thiago Leu</span>
+    <span>Portfólio criado em HTML, CSS e JavaScript.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

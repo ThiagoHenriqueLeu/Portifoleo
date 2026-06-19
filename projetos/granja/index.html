@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granja Galinhas Douradas - Ovos Orgânicos e Frangos Saudáveis</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #d4a017;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .hero {
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            max-width: 600px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #d4a017;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #b8860b;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        section {
+            padding: 4rem 0;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #d4a017;
+        }
+        .about {
+            background-color: white;
+            text-align: center;
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        .about-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .products {
+            background-color: #f9f9f9;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .product-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .sustainability {
+            background-color: white;
+            text-align: center;
+        }
+        .sustainability img {
+            max-width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .sustainability ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .sustainability li {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        .sustainability li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d4a017;
+            font-weight: bold;
+        }
+        .gallery {
+            background-color: #f9f9f9;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .gallery-grid img {
+            max-width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            background-color: white;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #d4a017;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #b8860b;
+        }
+        footer {
+            background-color: #d4a017;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Granja Galinhas Douradas</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#sustainability">Sustentabilidade</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo à Granja Galinhas Douradas</h1>
+            <p>Desde 2010, dedicamo-nos à criação ética e sustentável de galinhas poedeiras e frangos de corte. Nossas aves vivem em harmonia com a natureza, produzindo ovos orgânicos e carnes frescas de qualidade superior. Venha conhecer nossa paixão pela avicultura responsável!</p>
+            <a href="#products" class="btn">Descubra Nossos Produtos</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Nossa Granja</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A Granja Galinhas Douradas foi fundada em 2010 por uma família apaixonada por aves e pela vida rural. Localizada no coração do interior de São Paulo, nossa propriedade de 50 hectares é dedicada exclusivamente à criação de galinhas em sistema semi-intensivo, permitindo que as aves se movimentem livremente e expressem comportamentos naturais.</p>
+                    <p>Com mais de uma década de experiência, investimos em tecnologias modernas de manejo sanitário e nutrição balanceada, garantindo a saúde das nossas galinhas e a pureza dos produtos. Somos certificados como produtores orgânicos pelo IBD, assegurando que todos os nossos itens sejam livres de agrotóxicos, hormônios e antibióticos desnecessários.</p>
+                    <p>Nossa missão é fornecer alimentos saudáveis para as mesas brasileiras, promovendo o bem-estar animal e a preservação ambiental. Junte-se a nós nessa jornada rumo a uma avicultura mais ética e sustentável!</p>
+                </div>
+                <img src="2.jpg" alt="Equipe da granja trabalhando com galinhas">
+            </div>
+            <img src="3.jpg" alt="Paisagem da granja ao entardecer" style="max-width: 100%; margin-top: 5rem; border-radius: 8px;">
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Nossos Produtos Frescos</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Oferecemos uma variedade de produtos colhidos diariamente, com foco na qualidade e no sabor autêntico da criação natural.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="ovo.jpg" alt="Ovos orgânicos frescos">
+                    <h3>Ovos Orgânicos</h3>
+                    <p>Ovos colhidos diariamente de galinhas poedeiras criadas soltas. Ricos em ômega-3 e vitaminas, perfeitos para uma alimentação saudável. Disponíveis em dúzias de 12 ou 30 unidades.</p>
+                </div>
+                <div class="product-card">
+                    <img src="frango.webp" alt="Frangos de corte premium">
+                    <h3>Frangos de Corte</h3>
+                    <p>Frangos criados por 90 dias em pastagens rotacionadas, resultando em carne tenra e saborosa. Sem hormônios, ideais para churrascos e refeições familiares. Pesos de 1,5 a 3 kg.</p>
+                </div>
+                <div class="product-card">
+                    <img src="ração.webp" alt="Rações naturais para aves">
+                    <h3>Rações Naturais</h3>
+                    <p>Alimentação balanceada à base de milho orgânico, soja e ervas. Projetada para promover o crescimento saudável e a produção de ovos de alta qualidade. Disponível em sacos de 25 kg.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+   
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Estamos ansiosos para ouvir de você! Seja para pedidos, parcerias ou dúvidas sobre nossos produtos, entre em contato.</p>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <input type="tel" placeholder="Seu Telefone" required>
+                <textarea rows="5" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <p style="margin-top: 1rem; font-size: 1rem;">Email: contato@galinhasdouradas.com | Telefone: (11) 1234-5678 | Endereço: Rua das Aves, 123 - Interior de SP</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Granja Galinhas Douradas. Todos os direitos reservados. | Desenvolvido com paixão pela avicultura sustentável.</p>
+        </div>
+    </footer>
+</body>
+</html>

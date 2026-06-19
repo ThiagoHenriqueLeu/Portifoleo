@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 13pt;
+    color: rgb(92, 91, 91);
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* senha padrtão */
+#div-senha {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 153, 255, 0.932);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.178);
+    margin: 0 auto;
+    margin-top: 10%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#div-senha input {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(92, 92, 92, 0.11);
+}
+
+input:focus {
+    outline: none;
+}
+
+#div-senha #botao {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 153, 255, 0.932);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 11pt;
+    cursor: pointer;
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de senha</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div id="div-senha">
+        <form action="http://192.168.103.157/cripto/post/validarlogin.php" method="POST" id="formLogin" name="form">
+            <h2>Login</h2>
+            <label for="usuario">Usuário:</label> <br>
+            <input type="text" name="usuario" id="usuario"> <br>
+
+            <label for="senha">Senha:</label> <br>
+            <input type="password" name="senha" id="senha"> <br>
+
+            <input type="submit" id="botao" name="enviar" value="Enviar">
+        </form>
+    </div>
+
+</body>
+
+</html>
